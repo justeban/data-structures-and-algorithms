@@ -8,5 +8,5 @@
 Write a function called reverseArray which takes an array as an argument. Without utilizing any of the built-in methods available to your language, return the provided array argument with elements in reversed order.
 
 ### Solution
-*Solution 1* - *Solution 2*
+*[Solution 1](https://github.com/justeban/data-structures-and-algorithms/blob/array_reverse/array_reverse.js/#L3)* - *[Solution 2](https://github.com/justeban/data-structures-and-algorithms/blob/array_reverse/array_reverse.js/#L16)*
 ![reverse array solution](./assets/array_reverse.jpg)
