@@ -2,7 +2,7 @@
 
 // Solution 1 
 
-reverseArray = (arr) => {
+reverseArray = (arr) => { //eslint-disable-line
   let newArray = [];
   let k = 0;
 
@@ -11,11 +11,11 @@ reverseArray = (arr) => {
     k++;
   }
   return newArray;
-}
+};
 
 // Solution 2 
 
-reverseArray = (arr) => {
+reverseArray = (arr) => { // eslint-disable-line
   let i = arr.length - 1;
   let k = 0;
   let newArray = [];
@@ -26,4 +26,4 @@ reverseArray = (arr) => {
     i--;
   }
   return newArray;
-}
+};

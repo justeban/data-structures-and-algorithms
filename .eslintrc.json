@@ -1,48 +1,40 @@
 {
-  "extends": "eslint:recommended",
-  "parserOptions": {
-    "ecmaVersion": 6,
-    "ecmaFeatures": {
-      "impliedStrict": true
-    }
-  },
   "env": {
     "browser": true,
+    "node": true,
+    "commonjs": true,
+    "jest": true,
     "es6": true
   },
+  "globals": {
+    "err": true,
+    "req": true,
+    "res": true,
+    "next": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "sourceType": "module"
+  },
   "rules": {
-    "eqeqeq": [
-      "error",
-      "always"
-    ],
     "no-console": "off",
-    "no-undefined": "off",
     "indent": [
       "error",
       2
     ],
     "quotes": [
-      "warn",
-      "single"
-    ],
-    "no-multi-spaces": [
-      "warn",
-      {
-        "exceptions": {
-          "VariableDeclarator": true
-        }
-      }
-    ],
-    "no-trailing-spaces": "warn",
-    "new-cap": "warn",
-    "no-redeclare": [
       "error",
+      "single",
       {
-        "builtinGlobals": true
+        "allowTemplateLiterals": true
       }
+    ],
+    "comma-dangle": [
+      "error",
+      "always-multiline"
     ],
     "semi": [
-      2,
+      "error",
       "always"
     ]
   }
