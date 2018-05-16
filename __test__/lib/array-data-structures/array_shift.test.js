@@ -1,6 +1,6 @@
 'use strict';
 
-let insertShiftArray = require('../../array_shift.js');
+let insertShiftArray = require('../../../lib/array-data-structures/array_shift.js');
 
 describe('Array Shift', () => {
   it('insertShiftArray([1,2,3,4], 7)', () => {

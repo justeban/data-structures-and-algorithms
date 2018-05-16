@@ -4,6 +4,21 @@
 
 *Whiteboard Challenges for Code Fellows seattle401d24*
 
+Table of contents
+=================
+
+<!--ts-->
+  * [Array Data Structure Modules](#array-data-structure-modules)
+    * [Challenge 1 - Reverse Array](#challenge-1---reverse-array)
+    * [Challenge 2 - Insert and Shift Array](#challenge-2---insert-and-shift-array)
+    * [Challenge 3 - Array Binary Search](#challenge-3---array-binary-search)
+<!--te-->
+
+
+
+Array Data Structure Modules
+===============================
+
 ## Challenege 1 - Reverse Array 
 
 ### Challenge
@@ -24,3 +39,13 @@ Write a function called ```insertShiftArray``` which takes in an array and the v
 
 ![Solution](/assets/array_shift1.jpg)
 ![Solution](/assets/array_shift2.jpg)
+
+## Challenge 3 - Array Binary Search 
+
+### Challenge 
+
+Write a function called ```BinarySearch``` which takes in 2 parameters: a sorted array and the search key. Without utilizing any of the built-in methods available to your language, return the index of the array’s element that is equal to the search key, or -1 if the element does not exist.
+
+### Solution
+![Solution](/assets/array_binary_search1.jpg)
+![Solution](/assets/array_binary_search2.jpg)

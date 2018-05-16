@@ -5,7 +5,7 @@
   "main": "array_reverse.js",
   "scripts": {
     "lint": "eslint **/*.js",
-    "test": "jest --verbose --coverage",
+    "test": "jest  ./__test__/lib/array-data-structures/array_binary_search.test.js --verbose --coverage",
     "test-watch": "jest --watchAll --verbose --coverage"
   },
   "repository": {
