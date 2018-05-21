@@ -215,5 +215,73 @@ describe('Linked List Module', () => {
 
   });
 
+  it('serialize(), when run on empty list, will throw error', () => {
+    let list = new LL();
+   
+    expect(() => {
+      list.serialize();
+    }).toThrowError(/^list has no nodes$/);
+  });
 
+  it('serialize(), when run, will return a JSON Valid array of Nodes', () => {
+    let list = new LL();
+    let initialValue = 'First One';
+    list.append(initialValue);
+
+    let secondValue = 'Second Thing';
+    list.append(secondValue);
+
+    let thirdValue = 'Third Thing';
+    list.append(thirdValue);
+
+    let fourthValue = 'Fourth Thing';
+    list.append(fourthValue);
+
+    let x = list.serialize();
+
+    expect(x).toEqual("[\"First One\",\"Second Thing\",\"Third Thing\",\"Fourth Thing\"]");
+  });
+
+  it('deserialize(), when run with no input, the throws an error', () => {
+    let list = new LL();
+
+    expect(() => {
+      list.deserialize();
+    }).toThrowError(/^parameter was empty$/);
+  });
+
+  it('deserialize(), when run with no input, the throws an error', () => {
+    let list = new LL();
+
+    let data = {
+      name: 'john',
+      bald: true
+    }
+
+    expect(() => {
+      list.deserialize(data);
+    }).toThrow();
+  });
+
+  it('serialize(), when run, will return a JSON Valid array of Nodes', () => {
+    let list = new LL();
+    let initialValue = 'First One';
+    list.append(initialValue);
+
+    let secondValue = 'Second Thing';
+    list.append(secondValue);
+
+    let thirdValue = 'Third Thing';
+    list.append(thirdValue);
+
+    let fourthValue = 'Fourth Thing';
+    list.append(fourthValue);
+
+    let x = list.serialize();
+
+    let newList = new LL();
+    newList.deserialize(x);
+    
+    expect(newList).toEqual(list);
+  });
 });
