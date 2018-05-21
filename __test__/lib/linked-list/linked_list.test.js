@@ -239,7 +239,7 @@ describe('Linked List Module', () => {
 
     let x = list.serialize();
 
-    expect(x).toEqual("[\"First One\",\"Second Thing\",\"Third Thing\",\"Fourth Thing\"]");
+    expect(x).toEqual("[\"First One\",\"Second Thing\",\"Third Thing\",\"Fourth Thing\"]"); // eslint-disable-line
   });
 
   it('deserialize(), when run with no input, the throws an error', () => {
@@ -255,8 +255,8 @@ describe('Linked List Module', () => {
 
     let data = {
       name: 'john',
-      bald: true
-    }
+      bald: true ,
+    };
 
     expect(() => {
       list.deserialize(data);
@@ -281,7 +281,7 @@ describe('Linked List Module', () => {
 
     let newList = new LL();
     newList.deserialize(x);
-    
+
     expect(newList).toEqual(list);
   });
 });
