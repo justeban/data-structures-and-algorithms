@@ -109,7 +109,7 @@ describe('Linked List Module', () => {
     let initialValue = 'First One';
     list.append(initialValue);
     expect(list.head.value).toEqual(initialValue);
-    
+
     list.reverse();
     expect(list.head.value).toEqual(initialValue);
 
@@ -135,5 +135,85 @@ describe('Linked List Module', () => {
     expect(list.head.next.next.next.value).toEqual(initialValue);
     expect(list.head.next.next.next.next).toBeNull();
   });
+
+  it('remove(\'one\'), when run, if offset is not a number should return an error', () => {
+    let list = new LL();
+    let initialValue = 'First One';
+    list.append(initialValue);
+
+    let secondValue = 'Second Thing';
+    list.append(secondValue);
+    expect(() => {
+      list.remove('one');
+    }).toThrow();
+
+  });
+
+  it('remove(-1), when run, if offset is not a number should return an error', () => {
+    let list = new LL();
+    let initialValue = 'First One';
+    list.append(initialValue);
+
+    let secondValue = 'Second Thing';
+    list.append(secondValue);
+    expect(() => {
+      list.remove(-1);
+    }).toThrow();
+
+  });
+
+  it('remove(15), when run, if offset is greater than length of linked list, should return an error', () => {
+    let list = new LL();
+    let initialValue = 'First One';
+    list.append(initialValue);
+
+    let secondValue = 'Second Thing';
+    list.append(secondValue);
+
+    expect(() => {
+      list.remove(15);
+    }).toThrowError(/^offset greater than length of linked list$/);
+  });
+
+  it('remove(0), when run, will remove node at head and replace with next node (zero-based)', () => {
+    let list = new LL();
+    let initialValue = 'First One';
+    list.append(initialValue);
+
+    let secondValue = 'Second Thing';
+    list.append(secondValue);
+
+    let thirdValue = 'Third Thing';
+    list.append(thirdValue);
+
+    let fourthValue = 'Fourth Thing';
+    list.append(fourthValue);
+    
+    list.remove(0);
+
+    expect(list.head.value).toEqual(secondValue);
+
+  });
+
+  it('remove(2), when run will remove node at index 2, or third item, (zero-based)', () => {
+    let list = new LL();
+    let initialValue = 'First One';
+    list.append(initialValue);
+
+    let secondValue = 'Second Thing';
+    list.append(secondValue);
+
+    let thirdValue = 'Third Thing';
+    list.append(thirdValue);
+
+    let fourthValue = 'Fourth Thing';
+    list.append(fourthValue);
+
+    list.remove(2); 
+
+    expect(list.head.next.next.value).toEqual(fourthValue);
+
+  });
+
 
 });
