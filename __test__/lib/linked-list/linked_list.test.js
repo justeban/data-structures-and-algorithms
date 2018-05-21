@@ -9,6 +9,13 @@ describe('Linked List Module', () => {
     expect(list.head).toBeNull();
   });
 
+  it('append(), when run with empty parameter, will throw error', () => {
+    let list = new LL();
+    expect(() => {
+      list.append();
+    }).toThrowError(/^no value given$/);
+  });
+
   it('append(value), when run, if Linked List is empty expect list.head.value to equal value',() => {
     let list = new LL();
     let initialValue = 'First One';
@@ -51,6 +58,13 @@ describe('Linked List Module', () => {
     }
   
     expect(currentNode.value).toEqual(thirdValue);
+  });
+
+  it('prepend(), when run with empty parameter, will throw error', () => {
+    let list = new LL();
+    expect(() => {
+      list.prepend();
+    }).toThrowError(/^no value given$/);
   });
 
   it('prepend(value), when run, expect to replace list head with value', () => {
