@@ -263,7 +263,7 @@ describe('Linked List Module', () => {
     }).toThrow();
   });
 
-  it('serialize(), when run, will return a JSON Valid array of Nodes', () => {
+  it('deserialize(data), when run, will return a linked list with nodes made from data', () => {
     let list = new LL();
     let initialValue = 'First One';
     list.append(initialValue);
