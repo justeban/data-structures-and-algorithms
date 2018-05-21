@@ -5,8 +5,8 @@
   "main": "array_reverse.js",
   "scripts": {
     "lint": "eslint **/*.js",
-    "test": "jest  ./__test__/lib/array-data-structures/array_adjacent_product.test.js --verbose --coverage",
-    "test-watch": "jest --watchAll --verbose --coverage"
+    "test": "jest ./__test__/lib/linked-list/ --verbose --coverage",
+    "test-watch": "jest ./__test__/lib/linked-list/ --watchAll --verbose --coverage"
   },
   "repository": {
     "type": "git",
