@@ -19,7 +19,9 @@
       * [```reverse()```](#ll-reverse)
       * [```remove(offset)```](#ll-remove)
       * [```serialize()```](#ll-serialize)
-      * ```deserialize(data)```
+      * [```deserialize(data)```](#ll-deserialize)
+    * [Challenges](#ll-challenges)
+      * [Linked List Insertions](#ll-challenge1)  
 
 
 ## Array Data Structure Modules
@@ -271,5 +273,26 @@ LinkedList {
      next: Node { value: 'Second Thing', next: [Node] } } }
      
   ```
+<a id="ll-challenges"></a>
 
+Challenges
+=========
 
+<a id="ll-challenge1"></a>
+
+### Challenge 1 - Linked List Insertions
+
+#### Challenge
+
+Write the following methods for the Linked List class:
+
+* ```.append(value)``` which adds a new node with the given value to the end of the list
+* ```.insertBefore(value, newVal)``` which add a new node with the given newValue immediately before the first value node
+* ```.insertAfter(value, newVal)``` which add a new node with the given newValue immediately after the first value node
+
+#### Solution
+
+[*Coded Solution*](./lin/linked-lists/challenge_01/l.js) 
+
+![Image1](./assets/ll_insertions2.jpg)
+![Image2](./assets/ll_insertions1.jpg)
