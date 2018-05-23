@@ -22,6 +22,7 @@
       * [```deserialize(data)```](#ll-deserialize)
     * [Challenges](#ll-challenges)
       * [Linked List Insertions](#ll-challenge1)  
+      * [Kth From End](#ll-challenge2)  
 
 
 ## Array Data Structure Modules
@@ -292,7 +293,22 @@ Write the following methods for the Linked List class:
 
 #### Solution
 
-[*Coded Solution*](./lin/linked-lists/challenge_01/l.js) 
+[*Coded Solution*](./lib/linked-lists/challenge_01/ll.js) 
 
 ![Image1](./assets/ll_insertions2.jpg)
 ![Image2](./assets/ll_insertions1.jpg)
+
+<a id="ll-challenge2"></a>
+======
+
+### Challenge 2 - Kth From End Method
+
+#### Challenge
+
+Write a method for the Linked List class which takes a number, k, as a parameter. Return the node that is k from the end of the linked list. You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
+#### Solution
+
+[*Coded Solution*](./lib/linked-lists/challenge_02/ll_kth_from_end.js) 
+
+![Image1](./assets/ll_kth_from_end.jpg)
