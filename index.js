@@ -2,12 +2,14 @@
 
 const LL = require('./lib/linkded-lists/challenge_01/ll.js');
 
+const mergeLists = require('./lib/linkded-lists/challenge_03/ll_merge.js');
 
-let list = new LL();
+let list1 = new LL();
 
+list1.append('111').append('222').append('333');
 
-list.append('222').append('333').append('444').append('555');
+let list2 = new LL();
+list2.append('555').append('666').append('777');
 
-list.nthFromEnd(1);
-// list.insertAfter('222', '555');
-console.log(list.nthFromEnd(2));
+let greaterList = mergeLists(list1 , list2);
+console.log(greaterList);
