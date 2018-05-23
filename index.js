@@ -10,4 +10,4 @@ list.append('222').append('333').append('444').append('555');
 
 list.nthFromEnd(1);
 // list.insertAfter('222', '555');
-console.log(list.nthFromEnd(-1));
+console.log(list.nthFromEnd(2));
