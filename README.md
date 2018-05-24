@@ -23,6 +23,7 @@
     * [Challenges](#ll-challenges)
       * [Linked List Insertions](#ll-challenge1)  
       * [Kth From End](#ll-challenge2)  
+      * [Linked List Merge](#ll-challenge3)
 
 
 ## Array Data Structure Modules
@@ -312,3 +313,22 @@ Write a method for the Linked List class which takes a number, k, as a parameter
 [*Coded Solution*](./lib/linked-lists/challenge_02/ll_kth_from_end.js) 
 
 ![Image1](./assets/ll_kth_from_end.jpg)
+
+<a id="ll-challenge3"></a>
+======
+
+### Challenge 3 - Merge Two Linked Lists
+
+*File located at ```'./lib/linked-lists/challenge_03/ll_merge.js'```*
+
+*Requires methods from ```'./lib/linked-lists/linked_list.js'```
+
+#### Challenge
+
+Write a function called mergeLists which takes two linked lists as arguments. Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the single list. Try and keep additional space down to O(1). You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
+#### Solution
+
+[*Coded Solution*](./lib/linked-lists/challenge_03/ll_merge.js) 
+
+![Image1](./assets/ll_merge.jpg)
