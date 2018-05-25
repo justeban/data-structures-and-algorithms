@@ -350,4 +350,4 @@ Write a method called hasLoop that returns a boolean and determines whether or n
 
 [*Coded Solution*](./lib/linked-lists/challenge_04/ll_detect_loop.js) 
 
-<!-- ![Image1](./assets/ll_merge.jpg) -->
+![Image1](./assets/ll_detect_loop.jpg)
