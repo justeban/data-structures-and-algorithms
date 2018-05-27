@@ -332,3 +332,22 @@ Write a function called mergeLists which takes two linked lists as arguments. Zi
 [*Coded Solution*](./lib/linked-lists/challenge_03/ll_merge.js) 
 
 ![Image1](./assets/ll_merge.jpg)
+
+<a id="ll-challenge4"></a>
+======
+
+### Challenge 4 - Detect Loop
+
+*File located at ```'./lib/linked-lists/challenge_04/ll_detect_loop.js'```*
+
+*Requires methods from ```'./lib/linked-lists/linked_list.js'```
+
+#### Challenge
+
+Write a method called hasLoop that returns a boolean and determines whether or not a linked list has a loop or not. Will return true if linked list does have a loop and false if it doesn't. One of the goals was to not use any extra memory as we create this mehtod. 
+
+#### Solution
+
+[*Coded Solution*](./lib/linked-lists/challenge_04/ll_detect_loop.js) 
+
+![Image1](./assets/ll_detect_loop.jpg)

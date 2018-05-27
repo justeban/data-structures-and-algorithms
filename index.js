@@ -10,6 +10,6 @@ list1.append('111').append('222').append('333');
 
 let list2 = new LL();
 list2.append('555').append('666').append('777');
-
+console.log(list1.hasLoop());
 let greaterList = mergeLists(list1 , list2);
 console.log(greaterList);
