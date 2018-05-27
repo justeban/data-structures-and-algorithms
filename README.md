@@ -24,6 +24,7 @@
       * [Linked List Insertions](#ll-challenge1)  
       * [Kth From End](#ll-challenge2)  
       * [Linked List Merge](#ll-challenge3)
+      * [Detect Loop](#ll-challenge4)
 
 
 ## Array Data Structure Modules
@@ -294,7 +295,7 @@ Write the following methods for the Linked List class:
 
 #### Solution
 
-[*Coded Solution*](./lib/linked-lists/challenge_01/ll.js) 
+[*Coded Solution*](https://github.com/justeban/data-structures-and-algorithms/blob/master/lib/linkded-lists/challenge_01/ll.js) 
 
 ![Image1](./assets/ll_insertions2.jpg)
 ![Image2](./assets/ll_insertions1.jpg)
@@ -310,7 +311,7 @@ Write a method for the Linked List class which takes a number, k, as a parameter
 
 #### Solution
 
-[*Coded Solution*](./lib/linked-lists/challenge_02/ll_kth_from_end.js) 
+[*Coded Solution*](https://github.com/justeban/data-structures-and-algorithms/blob/master/lib/linkded-lists/challenge_02/ll_kth_from_end.js) 
 
 ![Image1](./assets/ll_kth_from_end.jpg)
 
@@ -329,7 +330,7 @@ Write a function called mergeLists which takes two linked lists as arguments. Zi
 
 #### Solution
 
-[*Coded Solution*](./lib/linked-lists/challenge_03/ll_merge.js) 
+[*Coded Solution*](https://github.com/justeban/data-structures-and-algorithms/blob/master/lib/linkded-lists/challenge_03/ll_merge.js) 
 
 ![Image1](./assets/ll_merge.jpg)
 
@@ -348,6 +349,6 @@ Write a method called hasLoop that returns a boolean and determines whether or n
 
 #### Solution
 
-[*Coded Solution*](./lib/linked-lists/challenge_04/ll_detect_loop.js) 
+[*Coded Solution*](https://github.com/justeban/data-structures-and-algorithms/blob/master/lib/linkded-lists/challenge_04/ll_detect_loop.js) 
 
 ![Image1](./assets/ll_detect_loop.jpg)
