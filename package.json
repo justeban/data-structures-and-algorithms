@@ -5,8 +5,8 @@
   "main": "array_reverse.js",
   "scripts": {
     "lint": "eslint **/*.js",
-    "test": "jest ./__test__/lib/linked-list/ --verbose --coverage",
-    "test-watch": "jest ./__test__/lib/linked-list/ --watchAll --verbose --coverage"
+    "test": "jest ./__test__/lib/stacks-and-queues/ --verbose --coverage",
+    "test-watch": "jest ./__test__/lib/stacks-and-queues/ --watchAll --verbose --coverage"
   },
   "repository": {
     "type": "git",
