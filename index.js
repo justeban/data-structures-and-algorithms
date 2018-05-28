@@ -1,15 +1,15 @@
 'use strict';
 
-const LL = require('./lib/linkded-lists/challenge_01/ll.js');
+const Stack = require('./lib/stacks-and-queues/stack.js');
 
-const mergeLists = require('./lib/linkded-lists/challenge_03/ll_merge.js');
+let stack = new Stack();
 
-let list1 = new LL();
+console.log(stack.push(1));
+console.log(stack.push(2));
+console.log(stack.push(3));
+console.log(stack.push(4));
 
-list1.append('111').append('222').append('333');
-
-let list2 = new LL();
-list2.append('555').append('666').append('777');
-console.log(list1.hasLoop());
-let greaterList = mergeLists(list1 , list2);
-console.log(greaterList);
+console.log(stack.pop());
+console.log(stack);
+console.log(stack.pop());
+console.log(stack);
