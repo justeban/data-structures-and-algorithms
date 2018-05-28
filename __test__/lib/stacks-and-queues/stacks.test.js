@@ -41,10 +41,10 @@ describe('Stack Module', () => {
     stack.push(1).push(2).push(3);
     let data = stack.serialize();
     expect(data).toBe("[3,2,1]"); // eslint-disable-line
-  })
+  });
 
   it('when deserialize run, epxect it to parse json array and push value in stack and return stack', () => {
-    let data = "[\"Apple\",\"Banana\",\"Orange\"]"
+    let data = "[\"Apple\",\"Banana\",\"Orange\"]"; // eslint-disable-line
     let stack = new Stack;
     stack.deserialize(data);
 
