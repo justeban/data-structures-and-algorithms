@@ -33,12 +33,12 @@ describe('Queue Module', () => {
     let queue = new Queue;
     queue.enqueue(1).enqueue(2).enqueue(3);
 
-    expect(queue.serialize()).toBe("[1,2,3]");
+    expect(queue.serialize()).toBe("[1,2,3]"); // eslint-disable-line
   });
 
   it('when deserialize is run, expect to deserialize value and use it to populate queue', () => {
     let queue = new Queue;
-    queue.deserialize("[1,2,3]")
+    queue.deserialize("[1,2,3]"); // eslint-disable-line
 
     expect(queue.queue).toEqual([1,2,3]);
   });
