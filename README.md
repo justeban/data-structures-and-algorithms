@@ -37,6 +37,8 @@
       * [```dequeue()```](#queue-dequeue)
       * [```serialize()```](#queue-serialize)
       * [```deserailize()```](#queue-deserialize)
+    * [Challenges](#stacks-queues-challenges)
+      * [Challenge 1 - Queues With Stacks](#stacks-queues-challenge1)
 
 <a id="array-data-structure-modules"></a>
 
@@ -528,3 +530,185 @@ let queue = new Queue;
 
   console.log(queue) // {queue: ['A', 'B', 'C']}
 ```
+<a id="stacks-queues"></a>
+
+Stacks and Queues
+=================
+
+## Stacks
+### Documentation
+
+This ```Stacks``` module is contained in the ```./lib/stacks-and-queues/stack.js```. 
+
+This Stack Data Structure contains a constructor that is made up of a ```stack``` property that holds data. 
+
+<a id="stack-methods"></a>
+This module for the ```Stack``` Data Structure utilizes the follwoing methods: 
+  * [```push()```](#stack-push)
+  * [```pop()```](#stack-pop)
+  * [```serialize()```](#stack-serialize)
+  * [```deserailize()```](#stack-deserialize)
+
+  <a id="stack-push"></a>
+
+```push(value)```
+===============
+
+This ```push()``` method complies by the stack's LIFO (Last In First Out) manner. 
+
+When using the push method, it will push the value to the top of the stack.
+
+```
+let stack = new Stack();
+
+stack.push(1);
+stack.push(2);
+stack.push(3);
+
+console.log(stack) // {stack: [3,2,1]}
+```
+You can also chain pushes together. 
+```
+let stack = new Stack();
+
+stack.push(1).push(2).push(3);
+```
+
+<a id="stack-pop"></a>
+
+```pop()```
+===========
+This ```pop()``` method will return next the value in the stack and also modify that stack itself.
+
+```
+let stack = new Stack();
+
+stack.push(1).push(2).push(3);
+
+let returned = stack.pop();
+
+console.log(returned, stack) // 3, {stack: [2,1]}
+```
+<a id="stack-serialize"></a>
+
+```serialize()```
+==================
+
+This ```serialize()``` method will return a JSON-valid object representing the data of the stack.
+
+```
+let stack = new Stack();
+
+stack.push('Apple').push('Orange').push('Pear');
+
+let data = stack.serialize();
+cosnole.log(data) // "["Pear", "Orange", "Apple"]"
+```
+<a id="stack-deserialize"></a>
+
+```deserialize(value)```
+=================
+
+In order to turn your data into a valid stack, you can use the ```deserialize()``` method. 
+```
+let data = "["Apple", "Pear", "Orange"];
+
+stack.deserialize(data);
+
+console.log(stack); // {stack: ['Apple', 'Pear', 'Orange']}
+```
+## Queues
+### Documentation
+
+This ```queue``` module is contained in the ```./lib/stacks-and-queues/queue.js```. 
+
+This Queue Data Structure contains a constructor that is made up of a ```queue``` property that holds data. 
+
+<a id="queue-methods"></a>
+
+This module for the ```Queue``` Data Structure utilizes the follwoing methods: 
+  * [```enqueue()```](#queue-enqueue)
+  * [```dequeue()```](#queue-dequeue)
+  * [```serialize()```](#queue-serialize)
+  * [```deserailize()```](#queue-deserialize)
+
+  <a id="queue-enqueue"></a>
+
+  ```enqueue(value)```
+  =====================
+
+  Thid ```enqueue``` method places the value next in the queue. This queue complies by the FIFO (First In First Out) standard. 
+
+  ```
+  let queue = new Queue;
+  queue.enqueue('A').enqueue('B').enqueue('C');
+
+  console.log(queue) // {queue: ['A', 'B', 'C']}
+  ```
+  *note that the enqueue and dequeue method can be changed together*
+  
+  <a id="queue-dequeue"></a>
+
+  ```dequeue()```
+  =================
+  The ```dequeue``` method will remove the next value in the queue.
+
+``` 
+let queue = new Queue;
+  queue.enqueue('A').enqueue('B').enqueue('C');
+
+  let returned = queue.dequeue();
+  console.log(returned, queue); // 'A', {queue: 'B', 'C'}
+
+  ```
+
+  <a id="queue-serialize"></a>
+
+  ```serialize()```
+  ============
+  The ```serialize()``` method doesn't take any paramter values. It returns a JSON-valid string that represents that data of the queue.
+
+  ``` 
+  let queue = new Queue;
+  queue.enqueue('A').enqueue('B').enqueue('C');
+
+  let data = queue.serialize();
+
+  console.log(data) // "["A", "B", "C"]"
+  ```
+
+  <a id="queue-deserialize"></a>
+
+  ```deserialize(value)```
+  =====================
+
+  The ```deserialize()``` method takes in a valid JSON object as a parameter and attaches it to the list that it is applied to. 
+  
+  ```
+  let data = "["A", "B", "C"]"
+  let queue = new Queue; 
+  queue.deserialize(data);
+
+  console.log(queue) // {queue: ['A', 'B', 'C']}
+```
+
+<a id="stacks-queues-challenges"></a>
+
+## Challenges
+
+<a id="stacks-queues-challenge1"></a>
+
+### Challenge 01 - Queues with Stacks
+
+Using Stacks and their methods create a enqueue and dequeue method.
+
+Implement the following methods for the Queue class:
+
+* ```enqueue(value)``` which inserts value into the Queue using a first-in, first-out approach.
+* ```dequeue()``` which extracts a value from the Queue using a first-in, first-out approach.
+* You have access to 2 Stack instances with push and pop methods.
+
+#### Solution
+
+![Image1](./assets/queues_with_stacks1.jpg)
+![Image2](./assets/queues_with_stacks2.jpg)
