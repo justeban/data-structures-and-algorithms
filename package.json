@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/justeban/data-structures-and-algorithms#readme",
   "dependencies": {
+    "babel-eslint": "^8.2.3",
+    "babel-register": "^6.26.0",
     "eslint": "^4.19.1",
     "jest": "^22.4.3"
   }

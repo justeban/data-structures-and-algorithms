@@ -55,7 +55,8 @@ Write a function called reverseArray which takes an array as an argument. Withou
 
 #### Solution
 *[Solution 1](https://github.com/justeban/data-structures-and-algorithms/blob/array_reverse/array_reverse.js/#L3)* - *[Solution 2](https://github.com/justeban/data-structures-and-algorithms/blob/array_reverse/array_reverse.js/#L16)*
-![reverse array solution](./assets/array_reverse.jpg)
+
+<img src="./assets/array_reverse.jpg" style="width: 350px;">
 
 <a id="insert-shift-array"></a>
 
@@ -67,9 +68,8 @@ Write a function called ```insertShiftArray``` which takes in an array and the v
 #### Solution
 *[Solution](https://github.com/justeban/data-structures-and-algorithms/blob/array_shift/array_shift.js/#L1)*
 
-
-![Solution](/assets/array_shift1.jpg)
-![Solution](/assets/array_shift2.jpg)
+<img src="./assets/array_shift1.jpg" style="width: 350px; text-align: center;">
+<img src="./assets/array_shift2.jpg" style="width: 350px; text-align: center;">
 
 <a id="binary-search"></a>
 
@@ -80,8 +80,10 @@ Write a function called ```insertShiftArray``` which takes in an array and the v
 Write a function called ```BinarySearch``` which takes in 2 parameters: a sorted array and the search key. Without utilizing any of the built-in methods available to your language, return the index of the array’s element that is equal to the search key, or -1 if the element does not exist.
 
 #### Solution
-![Solution](/assets/array_binary_search1.jpg)
-![Solution](/assets/array_binary_search2.jpg)
+
+<img src="./assets/array_binary_search1.jpg" style="width: 350px; text-align: center;">
+<img src="./assets/array_binary_search2.jpg" style="width: 350px; text-align: center;">
+
 
 <a id="adjacent-product"></a>
 
@@ -95,7 +97,7 @@ Write a function called ```largestProduct``` which takes in a 2D array. Without 
 
 [Link to Code](https://github.com/justeban/data-structures-and-algorithms/blob/master/lib/array-data-structures/array_adjacent_product.js)
 
-![Solution](/assets/array_adjacent_product.jpg)
+<img src="./assets/array_adjacent_product.jpg" style="width: 350px; text-align: center;">
 
 <a id="linked-list"></a>
 
@@ -313,8 +315,9 @@ Write the following methods for the Linked List class:
 
 [*Coded Solution*](https://github.com/justeban/data-structures-and-algorithms/blob/master/lib/linkded-lists/challenge_01/ll.js) 
 
-![Image1](./assets/ll_insertions2.jpg)
-![Image2](./assets/ll_insertions1.jpg)
+<img src="./assets/ll_insertions2.jpg" style="width: 350px; text-align: center;">
+
+<img src="./assets/ll_insertions1.jpg" style="width: 350px; text-align: center;">
 
 <a id="ll-challenge2"></a>
 ======
@@ -329,7 +332,7 @@ Write a method for the Linked List class which takes a number, k, as a parameter
 
 [*Coded Solution*](https://github.com/justeban/data-structures-and-algorithms/blob/master/lib/linkded-lists/challenge_02/ll_kth_from_end.js) 
 
-![Image1](./assets/ll_kth_from_end.jpg)
+<img src="./assets/ll_kth_from_end.jpg" style="width: 350px; text-align: center;">
 
 <a id="ll-challenge3"></a>
 ======
@@ -348,7 +351,7 @@ Write a function called mergeLists which takes two linked lists as arguments. Zi
 
 [*Coded Solution*](https://github.com/justeban/data-structures-and-algorithms/blob/master/lib/linkded-lists/challenge_03/ll_merge.js) 
 
-![Image1](./assets/ll_merge.jpg)
+<img src="./assets/ll_merge.jpg" style="width: 350px; text-align: center;">
 
 <a id="ll-challenge4"></a>
 ======
@@ -367,7 +370,7 @@ Write a method called hasLoop that returns a boolean and determines whether or n
 
 [*Coded Solution*](https://github.com/justeban/data-structures-and-algorithms/blob/master/lib/linkded-lists/challenge_04/ll_detect_loop.js) 
 
-![Image1](./assets/ll_detect_loop.jpg)
+<img src="./assets/ll_detect_loop.jpg" style="width: 350px; text-align: center;">
 
 <a id="stacks-queues"></a>
 
@@ -710,5 +713,24 @@ Implement the following methods for the Queue class:
 
 #### Solution
 
-![Image1](./assets/queues_with_stacks1.jpg)
-![Image2](./assets/queues_with_stacks2.jpg)
+<img src="./assets/queues_with_stacks1.jpg" style="width: 350px; text-align: center;">
+
+<img src="./assets/queues_with_stacks2.jpg" style="width: 350px; text-align: center;">
+
+### Challenge 02 - FIFO Animal Shelter
+
+Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.
+
+Implement the following methods:
+* ```enqueue(animal)```: adds animal to the shelter. animal can be either a dog or a cat object.
+* ```dequeue(pref)```: returns either a dog or a cat. If pref, a string, is ‘cat’ return the longest-waiting cat. If pref is ‘dog’, return the longest-waiting dog. For anything else, return either a cat or a dog.
+
+#### Solution 
+
+The module is located in 'challenge-02' of the 'stacks-and-queues' directory. 
+
+In order to use, you must import the ```animal.js```, which contains an animal constructor, and ```fifo_animal_shelter.js```, which contains the shelter class and its method. 
+
+These both reside in the same 'challenge-02' directory.
+
+<img src="./assets/fifo_animal_shelter.jpg" style="width: 350px; text-align: center;">
