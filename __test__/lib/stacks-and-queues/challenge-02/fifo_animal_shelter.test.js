@@ -13,7 +13,6 @@ let dog5 = new Animal('dog', 'zeke');
 let cat1 = new Animal('cat', 'snickers');
 let cat2 = new Animal('cat', 'spots');
 let cat3 = new Animal('cat', 'princess');
-let cat4 = new Animal('cat', 'brooklyn');
 let cat5 = new Animal('cat', 'dead meat');
 
 describe('FIFO Animal Shelter Challenge', () => {
@@ -67,7 +66,7 @@ describe('FIFO Animal Shelter Challenge', () => {
       animalShelter.enqueue(dog1).enqueue(dog2).enqueue(dog4).enqueue(dog5).enqueue(cat5);
       let animal = animalShelter.dequeue('cat');
 
-      expect(animal).toBe(cat5)
+      expect(animal).toBe(cat5);
     });
     
   });
