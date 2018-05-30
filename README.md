@@ -712,3 +712,21 @@ Implement the following methods for the Queue class:
 
 ![Image1](./assets/queues_with_stacks1.jpg)
 ![Image2](./assets/queues_with_stacks2.jpg)
+
+### Challenge 02 - FIFO Animal Shelter
+
+Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.
+
+Implement the following methods:
+* ```enqueue(animal)```: adds animal to the shelter. animal can be either a dog or a cat object.
+* ```dequeue(pref)```: returns either a dog or a cat. If pref, a string, is ‘cat’ return the longest-waiting cat. If pref is ‘dog’, return the longest-waiting dog. For anything else, return either a cat or a dog.
+
+#### Solution 
+
+The module is located in 'challenge-02' of the 'stacks-and-queues' directory. 
+
+In order to use, you must import the ```animal.js```, which contains an animal constructor, and ```fifo_animal_shelter.js```, which contains the shelter class and its method. 
+
+These both reside in the same 'challenge-02' directory.
+
+![image1](./assets/fifo_animal_shelter.jpg)
