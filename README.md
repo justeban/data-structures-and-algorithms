@@ -39,6 +39,7 @@
       * [```deserailize()```](#queue-deserialize)
     * [Challenges](#stacks-queues-challenges)
       * [Challenge 1 - Queues With Stacks](#stacks-queues-challenge1)
+      * [Challenge 2 - Queues With Stacks](#stacks-queues-challenge1)
 
 <a id="array-data-structure-modules"></a>
 
