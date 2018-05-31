@@ -39,6 +39,7 @@
       * [```deserailize()```](#queue-deserialize)
     * [Challenges](#stacks-queues-challenges)
       * [Challenge 1 - Queues With Stacks](#stacks-queues-challenge1)
+      * [Challenge 2 - Queues With Stacks](#stacks-queues-challenge1)
 
 <a id="array-data-structure-modules"></a>
 
@@ -734,3 +735,23 @@ In order to use, you must import the ```animal.js```, which contains an animal c
 These both reside in the same 'challenge-02' directory.
 
 <img src="./assets/fifo_animal_shelter.jpg" style="width: 350px; text-align: center;">
+
+### Challenge 03 - Multi Bracket Validation
+
+Your function should take a string as its only argument, and should return a boolean representing whether or not the brackets in the string are balanced. There are 3 types of brackets:
+
+* Round Brackets : ```()```
+* Square Brackets : ```[]```
+* Curly Brackets : ```{}```
+
+#### Solution 
+
+The module is located in 'challenge 3' of the 'stacks and queues' directory. 
+
+In order to use, you just have to require the module located at `./lib/stacks-and-queues/challenge-03/multi_bracket_validation.js`.
+
+
+<img src="./assets/multi_bracket_validation.jpg" style="width: 350px; text-align: center;">
+
+
+
