@@ -25,7 +25,7 @@
       * [Kth From End](#ll-challenge2)  
       * [Linked List Merge](#ll-challenge3)
       * [Detect Loop](#ll-challenge4)
-  * [Stacks and Queues]
+  * [Stacks and Queues](#stacks-queues)
     * [Stacks and Queue Docs](#stacks-queues)
     * [Stack Methods](#stack-methods)
       * [```push()```](#stack-push)
@@ -39,7 +39,9 @@
       * [```deserailize()```](#queue-deserialize)
     * [Challenges](#stacks-queues-challenges)
       * [Challenge 1 - Queues With Stacks](#stacks-queues-challenge1)
-      * [Challenge 2 - Queues With Stacks](#stacks-queues-challenge1)
+      * [Challenge 2 - FIFO Animal Shelter](#stacks-queues-challenge2)
+      * [Challenge 3 - Multi Bracket Validation](#stacks-queues-challenge3)
+      * [Challenge 4 - Towers of Hanoi](#stacks-queues-challenge4)
 
 <a id="array-data-structure-modules"></a>
 
@@ -718,6 +720,8 @@ Implement the following methods for the Queue class:
 
 <img src="./assets/queues_with_stacks2.jpg" style="width: 350px; text-align: center;">
 
+<a id="stacks-queues-challenge2"></a>
+
 ### Challenge 02 - FIFO Animal Shelter
 
 Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.
@@ -736,6 +740,8 @@ These both reside in the same 'challenge-02' directory.
 
 <img src="./assets/fifo_animal_shelter.jpg" style="width: 350px; text-align: center;">
 
+<a id="stacks-queues-challenge3"></a>
+
 ### Challenge 03 - Multi Bracket Validation
 
 Your function should take a string as its only argument, and should return a boolean representing whether or not the brackets in the string are balanced. There are 3 types of brackets:
@@ -752,6 +758,25 @@ In order to use, you just have to require the module located at `./lib/stacks-an
 
 
 <img src="./assets/multi_bracket_validation.jpg" style="width: 350px; text-align: center;">
+
+<a id="stacks-queues-challenge4"></a>
+
+### Challenge 04 - Towers of Hanoi
+
+The Towers of Hanoi is a mathematical puzzle where you have 3 towers and N disks of different sizes. The puzzle starts with the disks sorted (i.e. smaller disks sits on top of larger disks) on the left-most tower, and the objective of the puzzle is to move the disks to the right-most tower with the following restrictions:
+
+* Only one disk can be moved at a given time.
+* A disk is moved from the top of a tower to the top of another tower.
+* A disk can’t be placed on top of a smaller disk.
+
+#### Solution 
+
+The module is located in 'challenge 4' of the 'stacks and queues' directory. 
+
+In order to use, you just have to require the module located at `./lib/stacks-and-queues/challenge-04/towers-of-hanoi.js`.
+
+
+<img src="./assets/towers_of_hanoi.jpg" style="width: 350px; text-align: center;">
 
 
 
