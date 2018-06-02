@@ -42,6 +42,7 @@
       * [Challenge 2 - FIFO Animal Shelter](#stacks-queues-challenge2)
       * [Challenge 3 - Multi Bracket Validation](#stacks-queues-challenge3)
       * [Challenge 4 - Towers of Hanoi](#stacks-queues-challenge4)
+  * [Binary Trees](#binary-trees)
 
 <a id="array-data-structure-modules"></a>
 
@@ -778,5 +779,55 @@ In order to use, you just have to require the module located at `./lib/stacks-an
 
 <img src="./assets/towers_of_hanoi.jpg" style="width: 350px; text-align: center;">
 
+<a id="binary-trees"></a>
 
+Binary Trees
+=================
 
+## Documentation
+
+This ```Binary Tree``` module is contained in ```./lib/tree/lib/binary_tree.js```. 
+
+In order to use you must require the above file and also the Node constructor in the same directory (`./lib/tree/lib/node.js`).
+
+<a id="binary-tree-methods"></a>
+
+This `Binary Tree` module contains the following methods for this data structure: 
+
+  * `inOrder()`
+
+`inOrder();`
+============
+
+The `inOrder()` traverses the tree in an 'in order' fashion. It Traverse the left subtree by recursively calling the in-order function and then traverses the right subtree recursively.
+
+For Example: 
+
+```
+  const BinaryTree = require('/lib/trees/lib/binary_tree.js');
+  const Node = require('/lib/trees/lib/node.js');
+
+  const f = new Node('F');
+  const b = new Node('B');
+  const g = new Node('G');
+  const d = new Node('D');
+  const i = new Node('I');
+  const a = new Node('A');
+  const e = new Node('E');
+  const c = new Node('C');
+  const h = new Node('H');
+
+  const tree = new BinaryTree(f); // Initialize Tree with Root Node
+
+  f.right = b; 
+  b.right = g;
+  g.right = d;
+  d.right = i;
+  i.right = a;
+  a.right = e;
+  e.right = c;
+  c.right = h;
+
+  tree.inOrder(); // returns A,B,C,D,E,F,G,H,I
+```
+    
