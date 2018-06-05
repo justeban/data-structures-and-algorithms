@@ -4,16 +4,17 @@ const util = require('util');
 
 const BinaryTree = require('./lib/trees/lib/binary_tree.js');
 const Node = require('./lib/trees/lib/node.js');
+const fizzBuzzTree = require('./lib/trees/challenge-01/fizzBuzzTree.js');
 
-const one = new Node('F');
-const two = new Node('B');
-const three = new Node('G');
-const four = new Node('D');
-const five = new Node('I');
-const six = new Node('A');
-const seven = new Node('E');
-const eight = new Node('C');
-const nine = new Node('H');
+const one = new Node(1);
+const two = new Node(3);
+const three = new Node(6);
+const four = new Node(15);
+const five = new Node(8);
+const six = new Node(10);
+const seven = new Node(30);                                                                                                              
+const eight = new Node(4);
+const nine = new Node(19);
 
 const tree = new BinaryTree(one);
 
@@ -31,4 +32,5 @@ five.left = nine;
 
 console.log(util.inspect(tree, { showHidden: true, depth: null }));
 
-console.log(tree.inOrder());
+fizzBuzzTree(tree);
+console.log(tree);
