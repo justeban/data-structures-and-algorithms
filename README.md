@@ -43,6 +43,8 @@
       * [Challenge 3 - Multi Bracket Validation](#stacks-queues-challenge3)
       * [Challenge 4 - Towers of Hanoi](#stacks-queues-challenge4)
   * [Binary Trees](#binary-trees)
+    * [Challenges](#tree-challenges)
+      * [Challenge 01 - FizzBuzz Tree](#tree-challenge1)
 
 <a id="array-data-structure-modules"></a>
 
@@ -830,4 +832,25 @@ For Example:
 
   tree.inOrder(); // returns A,B,C,D,E,F,G,H,I
 ```
+
+<a id="tree-challenges"></a>
+
+Challenges
+==========
     
+<a id="tree-challenge1"></a>
+
+### Challenge 1 - A Fizz Buzz Tree
+
+Write a function that takes in a tree and changes the values divisble by `3` to `Fizz`, `5` to `Buzz` and by both to `FizzBuzz`.
+
+#### Solution
+
+The module is located in 'challenge-01' directory in './lib/trees/'. 
+
+To use the module you will also need to require in the Node Module (./lib/trees/node.js) and the Binary Tree Module (./lib/trees/binary_tree.js);
+
+<img src="./assets/fizzBuzzTree.jpg" style="width: 350px; text-align: center;">
+
+
+
