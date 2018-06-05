@@ -33,4 +33,4 @@ five.left = nine;
 console.log(util.inspect(tree, { showHidden: true, depth: null }));
 
 fizzBuzzTree(tree);
-console.log(tree);
+console.log(util.inspect(tree, {showHidden: true, depth: null}));
