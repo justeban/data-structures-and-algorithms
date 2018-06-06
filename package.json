@@ -6,8 +6,8 @@
   "scripts": {
     "lint": "eslint **/*.js",
     "start": "node index.js",
-    "test": "jest ./__test__/lib/trees/challenge-01/fizzBuzzTree.test.js --verbose --coverage",
-    "test-watch": "jest ./__test__/lib/trees/challenge-01/fizzBuzzTree.test.js --watchAll --verbose --coverage", 
+    "test": "jest ./__test__/lib/trees/challenge-02/breadth-first-traversal.test.js --verbose --coverage",
+    "test-watch": "jest ./__test__/lib/trees/challenge-02/breadth-first-traversal.test.js --watchAll --verbose --coverage", 
     "watch": "nodemon index.js"
   },
   "repository": {
