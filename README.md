@@ -45,6 +45,7 @@
   * [Binary Trees](#binary-trees)
     * [Challenges](#tree-challenges)
       * [Challenge 01 - FizzBuzz Tree](#tree-challenge1)
+      * [Challenge 02 - Breadth First Traversal](#tree-challenge2)
 
 <a id="array-data-structure-modules"></a>
 
@@ -863,6 +864,8 @@ Write a function called breadthFirstTraversal which takes a Binary Tree as its u
 The Module is located in 'challenge-02' directory in './lib/trees/'.
 
 To use the module you will need to pass in a tree as an argument and to do that you can use these modules: Node Module (./lib/trees/node.js) and the Binary Tree Module (./lib/trees/binary_tree.js);
+
+[Coded Solution](https://github.com/justeban/data-structures-and-algorithms/blob/master/lib/trees/lib/binary_tree.js)
 
 #### ATTEMPTED WHITEBOARD
 
