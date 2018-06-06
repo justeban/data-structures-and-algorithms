@@ -852,5 +852,18 @@ To use the module you will also need to require in the Node Module (./lib/trees/
 
 <img src="./assets/fizzBuzzTree.jpg" style="width: 350px; text-align: center;">
 
+<a id="tree-challenge2"></a>
 
+### Challenge 2 - Breadth First Traversal
 
+Write a function called breadthFirstTraversal which takes a Binary Tree as its unique input. Without utilizing any of the built-in methods available to your language, traverse the input tree using a Breadth-first approach; print every visited node’s value.
+
+#### Solution
+
+The Module is located in 'challenge-02' directory in './lib/trees/'.
+
+To use the module you will need to pass in a tree as an argument and to do that you can use these modules: Node Module (./lib/trees/node.js) and the Binary Tree Module (./lib/trees/binary_tree.js);
+
+#### ATTEMPTED WHITEBOARD
+
+<img src="./assets/breadth-first-traversal.jpg" style="width: 350px; text-align: center;">
