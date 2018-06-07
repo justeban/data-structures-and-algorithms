@@ -851,6 +851,7 @@ The module is located in 'challenge-01' directory in './lib/trees/'.
 
 To use the module you will also need to require in the Node Module (./lib/trees/node.js) and the Binary Tree Module (./lib/trees/binary_tree.js);
 
+Big O - Time O(n) Space O(h) *h being height of tree*
 <img src="./assets/fizzBuzzTree.jpg" style="width: 350px; text-align: center;">
 
 <a id="tree-challenge2"></a>
@@ -864,6 +865,8 @@ Write a function called breadthFirstTraversal which takes a Binary Tree as its u
 The Module is located in 'challenge-02' directory in './lib/trees/'.
 
 To use the module you will need to pass in a tree as an argument and to do that you can use these modules: Node Module (./lib/trees/node.js) and the Binary Tree Module (./lib/trees/binary_tree.js);
+
+BIG(O) - Time O(n) Space O(h) *h being the height of the tree*
 
 [Coded Solution](https://github.com/justeban/data-structures-and-algorithms/blob/master/lib/trees/challenge-02/breadth-first-traversal.js)
 
@@ -880,5 +883,7 @@ Write a function called find-maximum-value which takes binary tree as its only i
 The Module is located in 'challenge-03' directory in './lib/trees/'.
 
 To use the module you will need to pass in a tree as an argument and to do that you can use these modules: Node Module (./lib/trees/node.js) and the Binary Tree Module (./lib/trees/binary_tree.js);
+
+Big(O) - Time O(n) space O(h) *h being the height of the tree*
 
 <img src="./assets/btree_max_value.jpg" style="width: 350px; text-align: center;">
