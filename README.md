@@ -881,4 +881,4 @@ The Module is located in 'challenge-03' directory in './lib/trees/'.
 
 To use the module you will need to pass in a tree as an argument and to do that you can use these modules: Node Module (./lib/trees/node.js) and the Binary Tree Module (./lib/trees/binary_tree.js);
 
-<img src="./assets/btree-max-value.js" style="width: 350px; text-align: center;">
+<img src="./assets/btree_max_value.jpg" style="width: 350px; text-align: center;">
