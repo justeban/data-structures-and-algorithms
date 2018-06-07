@@ -46,6 +46,7 @@
     * [Challenges](#tree-challenges)
       * [Challenge 01 - FizzBuzz Tree](#tree-challenge1)
       * [Challenge 02 - Breadth First Traversal](#tree-challenge2)
+      * [Challenge 03 - Max Value of a Binary Tree](#tree-challenge3)
 
 <a id="array-data-structure-modules"></a>
 
@@ -873,6 +874,8 @@ BIG(O) - Time O(n) Space O(h) *h being the height of the tree*
 #### ATTEMPTED WHITEBOARD
 
 <img src="./assets/breadth-first-traversal.jpg" style="width: 350px; text-align: center;">
+
+<a id="tree-challenge3"></a>
 
 ### Challenge 3 - Max Value Of a Binary Tree
 
