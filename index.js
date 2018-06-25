@@ -2,35 +2,28 @@
 
 const util = require('util');
 
-const BinaryTree = require('./lib/trees/lib/binary_tree.js');
-const Node = require('./lib/trees/lib/node.js');
-const fizzBuzzTree = require('./lib/trees/challenge-01/fizzBuzzTree.js');
+const KAryTree = require('./lib/trees/lib/k_ary_tree.js');
+const KAryNode = require('./lib/trees/lib/k_ary_node.js');
 
-const one = new Node(1);
-const two = new Node(3);
-const three = new Node(6);
-const four = new Node(15);
-const five = new Node(8);
-const six = new Node(10);
-const seven = new Node(30);                                                                                                              
-const eight = new Node(4);
-const nine = new Node(19);
+let j = new KAryNode('J');
+j.appendChild('O');
+j.appendChild('H');
+j.appendChild('N');
 
-const tree = new BinaryTree(one);
+j.children[0].appendChild('I');
+j.children[0].appendChild('S');
 
-one.left = two; //
-one.right = three; //
-two.right = four;// 
-three.right = five;//
-two.left = six; //
-four.right = seven;//
-four.left = eight;
-five.left = nine;
-
-// console.log(tree);
+j.children[0].children[1].appendChild('B');
+j.children[0].children[1].appendChild('A');
+j.children[0].children[1].appendChild('L');
+j.children[0].children[1].appendChild('D');
 
 
-console.log(util.inspect(tree, { showHidden: true, depth: null }));
+// console.log(util.inspect(j, { showHidden: true, depth: null }));
 
-fizzBuzzTree(tree);
-console.log(util.inspect(tree, {showHidden: true, depth: null}));
+let tree = new KAryTree(j);
+let breadthTraversed = tree.breadthFirstTraversal();
+let depthTraversed = tree.depthFirstTraversal();
+
+console.log('Breadth: ', breadthTraversed);
+console.log('Depth: ', depthTraversed);
