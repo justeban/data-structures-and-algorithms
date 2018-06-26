@@ -964,6 +964,7 @@ This `K-Ary Tree` module contains the following methods for this data structure:
 
   `breadthFirstTraversal()`
   ==========================
+  *BIG(O)* - O(n)
 
   If we use our example we now have a tree that has breadFirstTraversal Method and it can be used like this:
 
@@ -973,8 +974,11 @@ This `K-Ary Tree` module contains the following methods for this data structure:
   // return: J O H N I S B A L D
 
   ```
+
   `depthFirstTraversal()`
   ========
+  *BIG(O)* - O(n)
+
   Using the same tree above, we can also use our depth first traversal method. 
   
   ```
@@ -1010,6 +1014,8 @@ This module includes the following methods:
 `set(key, value)`
 ======
 
+  *BIG(O)* - O(1)
+
 The set method is just a simple method to add values to your map with the key specified. It also increments the size of the map as you set your values. 
 
 ```
@@ -1039,6 +1045,8 @@ Hashmap {
 `get(key)`
 ======
 
+  *BIG(O)* - O(1)
+
 The `get(key)` method takes the plain text value of the key used to add the value. The method returns the value that is attaced to the key. 
 
 ```
@@ -1049,6 +1057,8 @@ myhash.get('Doug');
 
 `delete(key)`
 =======
+
+  *BIG(O)* - O(1)
 
 The delete method deletes a value from the hashmap use your plain text key value. If a successful delete happens the method will return `item deleted`.
 
@@ -1076,6 +1086,8 @@ Hashmap {
 `update(key, value)`
 ======
 
+  *BIG(O)* - O(1)
+
 This update method updates the value attached to the key. The key parameter is expected to be the plain text key. The function will throw an error if an invalid key is given or no value is given. 
 
 Using our current hash, if we wanted to change 'Doug' to a 'Cat':
@@ -1101,6 +1113,8 @@ Hashmap {
 `serialize()`
 ====
 
+  *BIG(O)* - O(n)
+
 The serialize method works by parse the data attached to the actual map property of our Hashmap turning it into a JSON valid object. 
 
 If we serialize our current hash: 
@@ -1118,6 +1132,8 @@ If we serialize our current hash:
 ```
 `deserialize(data)`
 =====
+
+  *BIG(O)* - O(n)
 
 The deserialize method can then use are JSON valid data to add into to the hashmap. 
 
