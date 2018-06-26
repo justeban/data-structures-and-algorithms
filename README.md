@@ -47,6 +47,9 @@
       * [Challenge 01 - FizzBuzz Tree](#tree-challenge1)
       * [Challenge 02 - Breadth First Traversal](#tree-challenge2)
       * [Challenge 03 - Max Value of a Binary Tree](#tree-challenge3)
+  * [K-Ary Trees](#kary-trees)
+    * [Module Docs](#kary-trees-doc)
+    * [Methods](#kary-trees-methods)
 
 <a id="array-data-structure-modules"></a>
 
@@ -890,3 +893,280 @@ To use the module you will need to pass in a tree as an argument and to do that 
 Big(O) - Time O(n) space O(h) *h being the height of the tree*
 
 <img src="./assets/btree_max_value.jpg" style="width: 350px; text-align: center;">
+
+<a id="kary-trees"></a>
+
+K-Ary Tree
+=================
+
+<a id="kary-trees-doc"></a>
+
+### Documentation
+
+The `K-Ary Tree` module is contained the `lib` directory at `./lib/trees/lib/k_ary_tree.js`.
+
+To use, all you must do is download and require the module. You must require the `k_ary_node.js` file in order to create the nodes of the K-Ary Tree.
+
+To create a K-Ary Tree: 
+```
+const KAryTree = require('./lib/trees/lib/k_ary_tree.js');
+const KAryNode = require('./lib/trees/lib/k_ary_node.js');
+
+// Create Nodes First
+
+let j = new KAryNode('J');
+
+j.appendChild('O');
+j.appendChild('H');
+j.appendChild('N');
+
+j.children[0].appendChild('I');
+j.children[0].appendChild('S');
+
+j.children[0].children[1].appendChild('B');
+j.children[0].children[1].appendChild('A');
+j.children[0].children[1].appendChild('L');
+j.children[0].children[1].appendChild('D');
+
+let tree = new KAryTree(j);
+
+/*
+KAryTree {
+  root:
+   KAryNode {
+     value: 'J',
+     children:
+      [ KAryNode {
+          value: 'O',
+          children:
+           [ KAryNode { value: 'I', children: [ [length]: 0 ] },
+             KAryNode {
+               value: 'S',
+               children:
+                [ KAryNode { value: 'B', children: [ [length]: 0 ] },
+                  KAryNode { value: 'A', children: [ [length]: 0 ] },
+                  KAryNode { value: 'L', children: [ [length]: 0 ] },
+                  KAryNode { value: 'D', children: [ [length]: 0 ] },
+                  [length]: 4 ] },
+             [length]: 2 ] },
+        KAryNode { value: 'H', children: [ [length]: 0 ] },
+        KAryNode { value: 'N', children: [ [length]: 0 ] },
+        [length]: 3 ] } }
+*/
+```
+
+<a id="kary-trees-methods"></a>
+
+This `K-Ary Tree` module contains the following methods for this data structure: 
+
+  * `breadthFirstTraversal()`
+  * `depthFirstTraversal()`
+
+  `breadthFirstTraversal()`
+  ==========================
+  *BIG(O)* - O(n)
+
+  If we use our example we now have a tree that has breadFirstTraversal Method and it can be used like this:
+
+  ```
+  tree.breadthFirstTraversal();
+  
+  // return: J O H N I S B A L D
+
+  ```
+
+  `depthFirstTraversal()`
+  ========
+  *BIG(O)* - O(n)
+
+  Using the same tree above, we can also use our depth first traversal method. 
+  
+  ```
+tree.depthFirstTraversal()
+
+// return: J N H O S D L A B I
+  ```
+
+<a id="hashmaps"></a>
+
+Hashmaps
+=================
+
+<a id="hashmaps-doc"></a>
+
+### Documentation
+
+The `Hashmap` module is contained the `lib` directory at `./lib/hashmap/hashmap.js`.
+
+To use, all you must do is download and require the module. You must require the `hashmap.js` file in order to create the nodes of the K-Ary Tree.
+
+The hashmap utilizes a linked list as its map structure. The hash function comes from the npm ['string-hash'](https://www.npmjs.com/package/string-hash).
+
+This module includes the following methods: 
+
+* `set(key, value)`
+* `get(key)`
+* `delete(key)`
+* `update(key, newValue)`
+* `serialize()`
+* `deserialize(data)`
+
+`set(key, value)`
+======
+
+  *BIG(O)* - O(1)
+
+The set method is just a simple method to add values to your map with the key specified. It also increments the size of the map as you set your values. 
+
+```
+let myhash = new Hashmap(0);
+
+myhash.set('Dezi', 'Dog');
+myhash.set('Doug', 'Dog');
+myhash.set('Demi', 'Dog');
+
+/*
+Hashmap {
+      size: 3,
+      map:
+      LinkedList {
+        head:
+          Node {
+            value:
+            { 
+              '2087642236': { key: 'Doug', value: 'Dog' },
+              '2087827424': { key: 'Demi', value: 'Cat' },
+              '2087847863': { key: 'Dezi', value: 'Dog' } 
+            },
+            next: null } } }
+*/
+```
+
+`get(key)`
+======
+
+  *BIG(O)* - O(1)
+
+The `get(key)` method takes the plain text value of the key used to add the value. The method returns the value that is attaced to the key. 
+
+```
+myhash.get('Doug');
+
+// returns 'Dog'
+```
+
+`delete(key)`
+=======
+
+  *BIG(O)* - O(1)
+
+The delete method deletes a value from the hashmap use your plain text key value. If a successful delete happens the method will return `item deleted`.
+
+```
+myhash.delete('Dezi');
+
+// returns 'item deleted'
+
+/*
+Hashmap {
+      size: 3,
+      map:
+      LinkedList {
+        head:
+          Node {
+            value:
+            { 
+              '2087642236': { key: 'Doug', value: 'Dog' },
+              '2087827424': { key: 'Demi', value: 'Cat' }, 
+            },
+            next: null } } }
+*/
+```
+
+`update(key, value)`
+======
+
+  *BIG(O)* - O(1)
+
+This update method updates the value attached to the key. The key parameter is expected to be the plain text key. The function will throw an error if an invalid key is given or no value is given. 
+
+Using our current hash, if we wanted to change 'Doug' to a 'Cat':
+```
+myHash.update('Doug', 'Cat');
+
+/*
+Hashmap {
+      size: 3,
+      map:
+      LinkedList {
+        head:
+          Node {
+            value:
+            { 
+              '2087642236': { key: 'Doug', value: 'Cat' },
+              '2087827424': { key: 'Demi', value: 'Cat' }, 
+            },
+            next: null } } }
+*/
+```
+
+`serialize()`
+====
+
+  *BIG(O)* - O(n)
+
+The serialize method works by parse the data attached to the actual map property of our Hashmap turning it into a JSON valid object. 
+
+If we serialize our current hash: 
+```
+[{
+	"2087642236": {
+		"key": "Doug",
+		"value": "Cat"
+	},
+	"2087827424": {
+		"key": "Demi",
+		"value": "Cat"
+	},
+}]
+```
+`deserialize(data)`
+=====
+
+  *BIG(O)* - O(n)
+
+The deserialize method can then use are JSON valid data to add into to the hashmap. 
+
+We can use our data from above to initialize a new Hashmap.
+
+```
+let data = [{
+	"2087642236": {
+		"key": "Doug",
+		"value": "Dog"
+	},
+	"2087827424": {
+		"key": "Demi",
+		"value": "Cat"
+	},
+}]
+
+let newHash = new Hashmap();
+
+newHash.deserialize(data);
+
+/*
+Hashmap {
+      size: 3,
+      map:
+      LinkedList {
+        head:
+          Node {
+            value:
+            { 
+              '2087642236': { key: 'Doug', value: 'Cat' },
+              '2087827424': { key: 'Demi', value: 'Cat' }, 
+            },
+            next: null } } }
+*/
+```
