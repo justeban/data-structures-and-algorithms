@@ -49,6 +49,7 @@
       * [Challenge 03 - Max Value of a Binary Tree](#tree-challenge3)
   * [K-Ary Trees](#kary-trees)
     * [Module Docs](#kary-trees-doc)
+    * [Methods](#kary-trees-methods)
 
 <a id="array-data-structure-modules"></a>
 
@@ -982,3 +983,174 @@ tree.depthFirstTraversal()
 // return: J N H O S D L A B I
   ```
 
+<a id="hashmaps"></a>
+
+Hashmaps
+=================
+
+<a id="hashmaps-doc"></a>
+
+### Documentation
+
+The `Hashmap` module is contained the `lib` directory at `./lib/hashmap/hashmap.js`.
+
+To use, all you must do is download and require the module. You must require the `hashmap.js` file in order to create the nodes of the K-Ary Tree.
+
+The hashmap utilizes a linked list as its map structure. The hash function comes from the npm ['string-hash'](https://www.npmjs.com/package/string-hash).
+
+This module includes the following methods: 
+
+* `set(key, value)`
+* `get(key)`
+* `delete(key)`
+* `update(key, newValue)`
+* `serialize()`
+* `deserialize(data)`
+
+`set(key, value)`
+======
+
+The set method is just a simple method to add values to your map with the key specified. It also increments the size of the map as you set your values. 
+
+```
+let myhash = new Hashmap(0);
+
+myhash.set('Dezi', 'Dog');
+myhash.set('Doug', 'Dog');
+myhash.set('Demi', 'Dog');
+
+/*
+Hashmap {
+      size: 3,
+      map:
+      LinkedList {
+        head:
+          Node {
+            value:
+            { 
+              '2087642236': { key: 'Doug', value: 'Dog' },
+              '2087827424': { key: 'Demi', value: 'Cat' },
+              '2087847863': { key: 'Dezi', value: 'Dog' } 
+            },
+            next: null } } }
+*/
+```
+
+`get(key)`
+======
+
+The `get(key)` method takes the plain text value of the key used to add the value. The method returns the value that is attaced to the key. 
+
+```
+myhash.get('Doug');
+
+// returns 'Dog'
+```
+
+`delete(key)`
+=======
+
+The delete method deletes a value from the hashmap use your plain text key value. If a successful delete happens the method will return `item deleted`.
+
+```
+myhash.delete('Dezi');
+
+// returns 'item deleted'
+
+/*
+Hashmap {
+      size: 3,
+      map:
+      LinkedList {
+        head:
+          Node {
+            value:
+            { 
+              '2087642236': { key: 'Doug', value: 'Dog' },
+              '2087827424': { key: 'Demi', value: 'Cat' }, 
+            },
+            next: null } } }
+*/
+```
+
+`update(key, value)`
+======
+
+This update method updates the value attached to the key. The key parameter is expected to be the plain text key. The function will throw an error if an invalid key is given or no value is given. 
+
+Using our current hash, if we wanted to change 'Doug' to a 'Cat':
+```
+myHash.update('Doug', 'Cat');
+
+/*
+Hashmap {
+      size: 3,
+      map:
+      LinkedList {
+        head:
+          Node {
+            value:
+            { 
+              '2087642236': { key: 'Doug', value: 'Cat' },
+              '2087827424': { key: 'Demi', value: 'Cat' }, 
+            },
+            next: null } } }
+*/
+```
+
+`serialize()`
+====
+
+The serialize method works by parse the data attached to the actual map property of our Hashmap turning it into a JSON valid object. 
+
+If we serialize our current hash: 
+```
+[{
+	"2087642236": {
+		"key": "Doug",
+		"value": "Cat"
+	},
+	"2087827424": {
+		"key": "Demi",
+		"value": "Cat"
+	},
+}]
+```
+`deserialize(data)`
+=====
+
+The deserialize method can then use are JSON valid data to add into to the hashmap. 
+
+We can use our data from above to initialize a new Hashmap.
+
+```
+let data = [{
+	"2087642236": {
+		"key": "Doug",
+		"value": "Dog"
+	},
+	"2087827424": {
+		"key": "Demi",
+		"value": "Cat"
+	},
+}]
+
+let newHash = new Hashmap();
+
+newHash.deserialize(data);
+
+/*
+Hashmap {
+      size: 3,
+      map:
+      LinkedList {
+        head:
+          Node {
+            value:
+            { 
+              '2087642236': { key: 'Doug', value: 'Cat' },
+              '2087827424': { key: 'Demi', value: 'Cat' }, 
+            },
+            next: null } } }
+*/
+```
