@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint **/*.js",
     "start": "node index.js",
-    "test": "jest --verbose --coverage",
+    "test": "jest ./__test__/lib/hashmap/hashmap.test.js --verbose --coverage",
     "test-watch": "jest ./__test__/lib/trees/k-ary-trees/k-ary-tree.test.js --watchAll --verbose --coverage",
     "watch": "nodemon index.js"
   },
