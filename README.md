@@ -1170,3 +1170,23 @@ Hashmap {
             next: null } } }
 */
 ```
+
+<a id="hash-challenges"></a>
+
+Challenges
+=====
+
+### Challenge 2 - Tree Intersection
+
+Write a function called tree_intersection that takes two binary tree parameters. Without utilizing any of the built-in library methods available to your language, return a set of values found in both trees.
+
+#### Solution
+
+The Module is located in 'tree-intersection' directory in './lib/hashmap/'.
+
+To use the module you will need to pass in two Binary trees as an argument and to do that you can use these modules: Node Module (./lib/trees/node.js) and the Binary Tree Module (./lib/trees/binary_tree.js);
+
+Big(O) - Time O(n) space O(h) *h being the height of the tree*
+
+<img src="./assets/tree-intersection.jpg" style="width: 350px; text-align: center;">
+
