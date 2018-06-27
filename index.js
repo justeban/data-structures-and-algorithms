@@ -9,7 +9,7 @@ const BinaryTree = require('./lib/trees/lib/binary_tree.js');
 const BinaryNode = require('./lib/trees/lib/node.js');
 
 let node1 = new BinaryNode(100);
-let node2 = new BinaryNode(200);
+let node2 = new BinaryNode('yellow');
 let node3 = new BinaryNode(300);
 let node4 = new BinaryNode(400);
 let node5 = new BinaryNode('DOG');
@@ -21,8 +21,8 @@ node4.right = node5;
 
 let bTree1 = new BinaryTree(node1);
 
-let node6 = new BinaryNode(600);
-let node7 = new BinaryNode(700);
+let node6 = new BinaryNode(100);
+let node7 = new BinaryNode('yellow');
 let node8 = new BinaryNode(800);
 let node9 = new BinaryNode('DOG');
 let node10 = new BinaryNode(1000);
