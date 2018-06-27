@@ -2,48 +2,43 @@
 
 const util = require('util');
 
-const Hashmap = require('./lib/hashmap/hashmap.js');
+const treeInt = require('./lib/hashmap/tree-intersection/tree_intersection.js');
+// const Hashmap = require('./lib/hashmap/hashmap.js');
 
-let myhash = new Hashmap(0);
+const BinaryTree = require('./lib/trees/lib/binary_tree.js');
+const BinaryNode = require('./lib/trees/lib/node.js');
+
+let node1 = new BinaryNode(100);
+let node2 = new BinaryNode(200);
+let node3 = new BinaryNode(300);
+let node4 = new BinaryNode(400);
+let node5 = new BinaryNode('DOG');
+
+node1.left = node2;
+node1.right = node3;
+node3.right = node4;
+node4.right = node5;
+
+let bTree1 = new BinaryTree(node1);
+
+let node6 = new BinaryNode(600);
+let node7 = new BinaryNode(700);
+let node8 = new BinaryNode(800);
+let node9 = new BinaryNode('DOG');
+let node10 = new BinaryNode(1000);
+
+node6.left = node7;
+node7.left = node8;
+node7.right = node9;
+node9.right = node10;
+
+let bTree2 = new BinaryTree(node6);
 
 
-myhash.set('Dezi', 'Dog');
-myhash.set('Doug', 'Dog');
-myhash.set('Demi', 'Dog');
-myhash.update('Demi', 'Cat');
-// myhash.set('Dezi');
-// console.log(util.inspect(myhash, {showHidden: true, depth: null}));
 
-// myhash.delete('Demi');
-console.log(util.inspect(myhash, { showHidden: true, depth: null }));
 
-// console.log(myhash.delete('Dezi'));
-// console.log(myhash.set('Dezi', 'Cat'));
-let data = myhash.serialize();
+// console.log(util.inspect(bTree, {showHidden: true, depth: null}));
 
-// let newHash = new Hashmap(0);
-console.log(data);
-// console.log(newHash.deserialize(data));
+let value = treeInt(bTree1, bTree2);
 
-const KAryTree = require('./lib/trees/lib/k_ary_tree.js');
-const KAryNode = require('./lib/trees/lib/k_ary_node.js');
-
-let j = new KAryNode('J');
-j.appendChild('O');
-j.appendChild('H');
-j.appendChild('N');
-
-j.children[0].appendChild('I');
-j.children[0].appendChild('S');
-
-j.children[0].children[1].appendChild('B');
-j.children[0].children[1].appendChild('A');
-j.children[0].children[1].appendChild('L');
-j.children[0].children[1].appendChild('D');
-
-let tree = new KAryTree(j);
-
-console.log(util.inspect(tree, {showHidden: true, depth: null}));
-
-console.log(tree.breadthFirstTraversal());
-console.log(tree.depthFirstTraversal());
+console.log(value);
