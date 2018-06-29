@@ -1190,3 +1190,23 @@ Big(O) - Time O(n) space O(h) *h being the height of the tree*
 
 <img src="./assets/tree-intersection.jpg" style="width: 350px; text-align: center;">
 
+### Challenge 3 - Left Join
+
+Write a function that LEFT JOINs two hashmaps into a single data structure.
+
+**Stretch Goals**
+Consider a RIGHT JOIN. Can you implement this as a new function? How about by passing an optional parameter to your initial function, to speficy if LEFT JOIN or RIGHT JOIN logic should be used?
+
+#### Solution
+
+The Module is located in 'left-join' directory in './lib/hashmap/'.
+
+```
+  leftJoin(h1, h2, type)
+```
+
+This function takes in two hashtables as an argument and a type parameter. The type parameter can be `'left'` or `'right'`. If given a `'left'` parameter the function will perform a left join. If given a `'right'` parameter the function will perform a right join. If given no type parameter, the function will default to a left join.
+
+Big(O) - Time O(n) space O(n)
+
+<img src="./assets/left_join.jpg" style="width: 350px; text-align: center;">
