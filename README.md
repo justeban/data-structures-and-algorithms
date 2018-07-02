@@ -44,12 +44,18 @@
       * [Challenge 4 - Towers of Hanoi](#stacks-queues-challenge4)
   * [Binary Trees](#binary-trees)
     * [Challenges](#tree-challenges)
-      * [Challenge 01 - FizzBuzz Tree](#tree-challenge1)
-      * [Challenge 02 - Breadth First Traversal](#tree-challenge2)
-      * [Challenge 03 - Max Value of a Binary Tree](#tree-challenge3)
+      * [Challenge 1 - FizzBuzz Tree](#tree-challenge1)
+      * [Challenge 2 - Breadth First Traversal](#tree-challenge2)
+      * [Challenge 3 - Max Value of a Binary Tree](#tree-challenge3)
   * [K-Ary Trees](#kary-trees)
     * [Module Docs](#kary-trees-doc)
     * [Methods](#kary-trees-methods)
+  * [Hashmaps](#hashmaps)
+    * [Documentation](#hashmaps-docs)
+    * [Challenges](#hash-challenges)
+      * Challenge 1 - Repeated Word
+      * Challenge 2 - Tree Intersection
+      * Challenge 3 - Table Joins
 
 <a id="array-data-structure-modules"></a>
 
@@ -1029,16 +1035,30 @@ myhash.set('Demi', 'Dog');
 Hashmap {
       size: 3,
       map:
-      LinkedList {
-        head:
-          Node {
-            value:
-            { 
-              '2087642236': { key: 'Doug', value: 'Dog' },
-              '2087827424': { key: 'Demi', value: 'Cat' },
-              '2087847863': { key: 'Dezi', value: 'Dog' } 
+        {
+          '2087642236': Linked List {
+            head: { 
+              value: { key: 'Doug', value: 'Dog' },
+              next: null,
             },
-            next: null } } }
+            size: 1,
+          }
+          '2087827424': Linked List {
+            head: {
+              value: { key: 'Demi', value: 'Cat' },
+              next: null,
+            },
+            size: 1,
+          },
+          '2087847863': Linked List {
+            head: {
+              value: { key: 'Dezi', value: 'Dog' },
+              next: null,
+            },
+            size: 1,            
+          }, 
+        }
+    }
 */
 ```
 
@@ -1071,15 +1091,23 @@ myhash.delete('Dezi');
 Hashmap {
       size: 3,
       map:
-      LinkedList {
-        head:
-          Node {
-            value:
-            { 
-              '2087642236': { key: 'Doug', value: 'Dog' },
-              '2087827424': { key: 'Demi', value: 'Cat' }, 
+        {
+          '2087642236': Linked List {
+            head: { 
+              value: { key: 'Doug', value: 'Dog' },
+              next: null,
             },
-            next: null } } }
+            size: 1,
+          }
+          '2087827424': Linked List {
+            head: {
+              value: { key: 'Demi', value: 'Cat' },
+              next: null,
+            },
+            size: 1,
+          }, 
+        }
+    }
 */
 ```
 
@@ -1096,17 +1124,32 @@ myHash.update('Doug', 'Cat');
 
 /*
 Hashmap {
-      size: 3,
-      map:
-      LinkedList {
-        head:
-          Node {
-            value:
-            { 
-              '2087642236': { key: 'Doug', value: 'Cat' },
-              '2087827424': { key: 'Demi', value: 'Cat' }, 
-            },
-            next: null } } }
+  size: 3,
+  map:
+    {
+      '2087642236': Linked List {
+        head: { 
+          value: { key: 'Doug', value: 'Cat' },
+          next: null,
+        },
+        size: 1,
+      }
+      '2087827424': Linked List {
+        head: {
+          value: { key: 'Demi', value: 'Cat' },
+          next: null,
+        },
+        size: 1,
+      },
+      '2087847863': Linked List {
+        head: {
+          value: { key: 'Dezi', value: 'Dog' },
+          next: null,
+        },
+        size: 1,            
+      }, 
+    }
+}
 */
 ```
 
@@ -1119,16 +1162,11 @@ The serialize method works by parse the data attached to the actual map property
 
 If we serialize our current hash: 
 ```
-[{
-	"2087642236": {
-		"key": "Doug",
-		"value": "Cat"
-	},
-	"2087827424": {
-		"key": "Demi",
-		"value": "Cat"
-	},
-}]
+[
+  "[{\"key\":\"Doug\",\"value\":\"Cat\"}]",
+  "[{\"key\":\"Demi\",\"value\":\"Cat\"}]",
+  "[{\"key\":\"Dezi\",\"value\":\"Dog\"}]"
+]
 ```
 `deserialize(data)`
 =====
@@ -1140,16 +1178,11 @@ The deserialize method can then use are JSON valid data to add into to the hashm
 We can use our data from above to initialize a new Hashmap.
 
 ```
-let data = [{
-	"2087642236": {
-		"key": "Doug",
-		"value": "Dog"
-	},
-	"2087827424": {
-		"key": "Demi",
-		"value": "Cat"
-	},
-}]
+let data = [
+  "[{\"key\":\"Doug\",\"value\":\"Cat\"}]",
+  "[{\"key\":\"Demi\",\"value\":\"Cat\"}]",
+  "[{\"key\":\"Dezi\",\"value\":\"Dog\"}]"
+]
 
 let newHash = new Hashmap();
 
@@ -1157,17 +1190,25 @@ newHash.deserialize(data);
 
 /*
 Hashmap {
-      size: 3,
-      map:
+  size: 3,
+  map:
+   { '2087642236':
       LinkedList {
-        head:
-          Node {
-            value:
-            { 
-              '2087642236': { key: 'Doug', value: 'Cat' },
-              '2087827424': { key: 'Demi', value: 'Cat' }, 
-            },
-            next: null } } }
+        head: Node { value: { key: 'Doug', value: 'Cat' }, next: null },
+        size: 1 
+      },
+     '2087827424':
+      LinkedList {
+        head: Node { value: { key: 'Demi', value: 'Cat' }, next: null },
+        size: 1 
+      },
+     '2087847863':
+      LinkedList {
+        head: Node { value: { key: 'Dezi', value: 'Dog' }, next: null },
+        size: 1 
+      } 
+    } 
+  }
 */
 ```
 
@@ -1175,6 +1216,64 @@ Hashmap {
 
 Challenges
 =====
+
+### Challenge 1 - Repeated Word
+
+Write a function that accepts a lengthy string parameter. Without utilizing any of the built-in library methods available to your language, return the first word to occur more than once in that provided string.
+
+#### Solution 
+
+The Module is located in 'repeated-word' directory in './lib/hashmap/.
+
+To use the module you require  in the module and denote the `repeatedWord` function.
+
+```
+const {repeatedWord} = require('./link-to-module/repeated_word.js);
+```
+
+This solution will return, in the format of a Set, the unique words that are repeated in a string. The function is written in effort to account for most kinds of punctuation. It works by stripping the string first of any punctuation and working through the string.
+
+Big(O) 
+- time O(n) - because we must traverse throught the entire string
+- space O(n) - because we are making a hashmap including every word of the entire string 
+
+<img src="./assets/repeated_word.jpg" style="width: 350px; text-align: center;">
+
+**Stretch Goal 1** 
+
+The first stretch goal associated with this challenge was to modify your function to return a count of each of the words in the provided string.
+
+So I created another function called `numWords` that returns the number of total words within a string.
+
+To use, use this line: 
+```
+const {numWords} = require('./link-to-module/repeated_word.js);
+```
+
+**Stretch Goal 2** 
+
+The second stretch goal was to Modify your function to return a list of the words most frequently used in the provided string.
+
+I created yet another function called `freqWords` that returns array of objects that contain a key/value pair of the word and the number of times it is used.
+
+To use, use this line: 
+```
+const {freqWords} = require('./link-to-module/repeated_word.js);
+```
+
+Example Code:
+```
+let string = "The best of times, the worst of times.";
+freqWords(string);
+/*
+[ { word: 'of', frequency: 2 },
+  { word: 'the', frequency: 2 },
+  { word: 'times', frequency: 2 },
+  { word: 'worst', frequency: 1 },
+  { word: 'best', frequency: 1 } 
+]
+*/
+```
 
 ### Challenge 2 - Tree Intersection
 
