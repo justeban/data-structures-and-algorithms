@@ -5,26 +5,21 @@ const Hashmap = require('../../../lib/hashmap/hashmap.js');
 
 describe('HASHMAP', () => {
   describe('constructor()' , () => {
-    it('when run expect map to be instance of a linked list', () => {
+    it('when run expect map and size to be defined', () => {
       let hash = new Hashmap(0);
-      expect(hash.map).toBeInstanceOf(LL);
+      expect(hash).toBeInstanceOf(Hashmap);
+      expect(hash.map).toBeDefined();
+      expect(hash.size).toBeDefined();
     });
   });
 
   describe('set()', () => {
-    it('expect to throw error when key already exists', () => {
-      let hash = new Hashmap();
-      hash.set('Dezi', 'Dog');
-      expect(() => {
-        hash.set('Dezi', 'Dog');
-      }).toThrow();
-    });
-
     it('expect to set with unique hash', () => {
       let hash = new Hashmap();
       hash.set('Dezi', 'Dog');
       hash.set('Demi', 'Dog');
-      expect(hash.map.head.value).toBeDefined();
+      expect(hash.get('Dezi')).toBeDefined();
+      expect(hash.get('Demi')).toBeDefined();
     });
   });
 
@@ -75,7 +70,7 @@ describe('HASHMAP', () => {
     });
   });
 
-  describe('deserializ()', () => {
+  describe('deserialize()', () => {
     it('when given invalid expect to throw', () => {
       let hash = new Hashmap();
       expect(() => hash.deserialize()).toThrow();
@@ -83,21 +78,17 @@ describe('HASHMAP', () => {
 
     it('when given proper data expect to populate hashmap', () => {
       let hash = new Hashmap();
-      hash.deserialize(`[{
-        "2087642236": {
-          "key": "Doug",
-          "value": "Dog"
-        },
-        "2087827424": {
-          "key": "Demi",
-          "value": "Cat"
-        },
-        "2087847863": {
-          "key": "Dezi",
-          "value": "Dog"
-        }
-      }]`);
-      expect(hash.get('Doug')).toBe('Dog');
+      hash.set('Dezi', 'Dog');
+      hash.set('Demi', 'Dog');
+      hash.set('Sophie', 'Dog');
+
+      let data = hash.serialize();
+
+      let hash2 = new Hashmap();
+      hash2.deserialize(data);
+
+      expect(hash).toEqual(hash2);
+
     });
 
   });
