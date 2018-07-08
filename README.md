@@ -56,6 +56,8 @@
       * Challenge 1 - Repeated Word
       * Challenge 2 - Tree Intersection
       * Challenge 3 - Table Joins
+  * [Sorts](#sorts)
+    * [Radix Sort](#radix-sort)
 
 <a id="array-data-structure-modules"></a>
 
@@ -1004,7 +1006,7 @@ Hashmaps
 
 The `Hashmap` module is contained the `lib` directory at `./lib/hashmap/hashmap.js`.
 
-To use, all you must do is download and require the module. You must require the `hashmap.js` file in order to create the nodes of the K-Ary Tree.
+To use, all you must do is download and require the module.
 
 The hashmap utilizes a linked list as its map structure. The hash function comes from the npm ['string-hash'](https://www.npmjs.com/package/string-hash).
 
@@ -1309,3 +1311,20 @@ This function takes in two hashtables as an argument and a type parameter. The t
 Big(O) - Time O(n) space O(n)
 
 <img src="./assets/left_join.jpg" style="width: 350px; text-align: center;">
+
+<a id="sorts"></a>
+
+Sorts
+======
+
+<a id="radix-sort"></a>
+
+The `Radix Sort` module is contained the `lib` directory at `./lib/sorts/radix-srot.js`.
+
+To use, all you must do is download and require the module.
+
+The `Raidx Sort` has a time complexity of O(k^n) and a space complexity of O(n^2).
+
+<img src="./assets/radix-sort.jpg" style="width: 350px; text-align: center;">
+
+
