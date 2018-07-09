@@ -1316,10 +1316,23 @@ Big(O) - Time O(n) space O(n)
 
 Sorts
 ======
+<a id="quicksort"></a>
+
+## Quicksort
+
+The `Quicksort` module is contained in `lib` directory at `./lib/sorts/quicksort.js`.
+
+To use, all you must do is download the repo and require the module. 
+
+The `Quicksort` has time complexity, in worst case, of O(n2) and a space complexity of O(n).
+
+<img src="./assets/quicksort.jpg" style="width: 350px; text-align: center;" >
 
 <a id="radix-sort"></a>
 
-The `Radix Sort` module is contained the `lib` directory at `./lib/sorts/radix-srot.js`.
+## Radix Sort
+
+The `Radix Sort` module is contained in the `lib` directory at `./lib/sorts/radix-srot.js`.
 
 To use, all you must do is download and require the module.
 
