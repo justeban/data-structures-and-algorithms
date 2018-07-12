@@ -5,7 +5,7 @@ const Stack = require('./lib/stacks-and-queues/stack.js');
 const Queue = require('./lib/stacks-and-queues/queue.js');
 const BST = require('./lib/trees/lib/binary_search_tree.js');
 const Node = require('./lib/trees/lib/node.js');
-
+const mergesort = require('./lib/sorts/mergesort.js');
 const util = require("util");
 
 let list = new LL();
@@ -237,7 +237,7 @@ function findMinHeight(tree) {
 
 
 let inOrderArray = bst.inOrder().split(',');
-console.log(inOrderArray);
+// console.log(inOrderArray);
 
 function fromArray(array) {
 
@@ -261,14 +261,10 @@ function fromArray(array) {
 }
 
 let ree = fromArray(inOrderArray);
-console.log(ree.isBalanced());
+// console.log(ree.isBalanced());
 
 // console.log(util.inspect(fromArray(inOrderArray), {showHidden: true, depth: null}));
 
+let array56 = [3, 21, -4, 18, 12, 8, 45, 7];
 
-
-
-
-
-
-
+console.log(mergesort(array56));
