@@ -3,6 +3,9 @@
 const LL = require('./lib/linkded-lists/linked_list.js');
 const Stack = require('./lib/stacks-and-queues/stack.js');
 const Queue = require('./lib/stacks-and-queues/queue.js');
+const BST = require('./lib/trees/lib/binary_search_tree.js');
+const Node = require('./lib/trees/lib/node.js');
+
 const util = require("util");
 
 let list = new LL();
@@ -151,8 +154,116 @@ function reverse(linkedList) {
 let reverseList = reverse(demoList);
 // console.log(util.inspect(reverseList, { showHidden: true, depth: null }));
 
+// BINARY SEARCH TREE
+
+let bst = new BST();
+let randNums = [58, 79, 8, -6, 12, 56, 93, 68, 16, 49, 50 , 100, 83, 85, 99, , 495, 376, 405, 205, 500, 700];
+
+randNums.map(item => {
+  return bst.insert(item);
+});
+
+// bst.remove(58);
+
+// console.log(util.inspect(bst, { showHidden: true, depth: null }));
+
+let findValueBST = (value, bst) => {
+  let currentNode = bst.root;
+  while (currentNode) {
+    if (value < currentNode.value) {
+      currentNode = currentNode.left;
+    } else if (value > currentNode.value) {
+      currentNode = currentNode.right;
+    } else if (value === currentNode.value){
+      return currentNode;
+    }
+  }
+  return undefined;
+}
+
+// console.log(findValueBST(69, bst));
+
+let sumOfBST = (bst) => {
+  let accum = 0;
+  
+  let _walk = (node) => {
+    if (node.left) {_walk(node.left)}
+    accum += node.value;
+    if (node.right) {_walk(node.right)}
+  }
+  _walk(bst.root);
+
+  return accum;
+}
+
+// console.log(sumOfBST(bst));
+
+let bst2 = new BST();
+let values = [9, 4, 17, 3, 6, 22, 5, 7, 20];
+// console.log(values);
+
+values.map((val, i) => {
+  return bst2.insert(val);
+})
+// console.log(util.inspect(bst2, {showHidden: true, depth: null}));
+
+function findLeaves(tree) {
+  let currentNode = tree.root;
+  let leaves = [];
+
+  let _walk = (node) => {
+    if (node.left) {_walk(node.left);}
+    if (!node.left && !node.right) {leaves[leaves.length] = node.value;}
+    if (node.right) {_walk(node.right);}
+  }
+  _walk(tree.root);
+  return leaves;
+}
+let leaves = findLeaves(bst2);
 
 
+function findMinHeight(tree) {
+
+  let minHeight = (node) => {
+    if (node === null) { return 0; }
+    let left = minHeight(node.left);
+    let right = minHeight(node.right);
+
+    if ( left < right ) { return left + 1 }
+    else {return right + 1}
+  }
+  return minHeight(tree.root);
+}
+
+
+let inOrderArray = bst.inOrder().split(',');
+console.log(inOrderArray);
+
+function fromArray(array) {
+
+  let createTree = (left, right) => {
+    
+    let mid = Math.floor((left + right)/2);
+
+    if (right < 0 || left > mid || !array[mid]) { return null; }
+    
+    let root = new Node(array[mid]);
+
+    root.left = createTree(left, mid-1);
+    root.right = createTree(mid+1, right);
+
+    return root;
+
+  };
+
+  let bst = new BST(createTree(0, array.length));
+  return bst;
+}
+
+let ree = fromArray(inOrderArray);
+console.log(ree.isBalanced());
+
+// console.log(util.inspect(fromArray(inOrderArray), {showHidden: true, depth: null}));
 
 
 
