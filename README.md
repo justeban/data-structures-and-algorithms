@@ -1316,6 +1316,18 @@ Big(O) - Time O(n) space O(n)
 
 Sorts
 ======
+
+<a id="mergesort"></a>
+
+The `Mergesort` module is contained in the `lib` directory at `./lib/sorts/mergesort.js`. 
+
+To use, just download the repo and require the module. 
+
+The `Mergesort` has a time complexity of O(n log(n)). 
+
+<img src="./assets/mergesort1.jpg" style="width: 350px; text-align: center;" >
+<img src="./assets/mergesort2.jpg" style="width: 350px; text-align: center;" >
+
 <a id="quicksort"></a>
 
 ## Quicksort
